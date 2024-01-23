@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    /* Set the background image and its path */
+    background-image: url('images/newton.jpg');
+
+    /* Make the background cover the entire viewport */
+    background-size: cover;
+
+
+    /* Define the opacity (adjust as needed) */
+    opacity: 85%;
+}
+
+h1,
+h2 {
+    color: black;
+    margin-left: 3%;
+}
+
+ul,
+li {
+    color: black;
+    margin-left: 2%;
+}
+
+.achievements {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.previous-page {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-left: 35px;
+    transition: background-color 0.3s ease;
+}
+
+.previous-page:hover {
+    background-color: #e30f0f79;
+}
