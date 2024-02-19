@@ -1,6 +1,105 @@
 /* styles.css */
 
 /* Reset default styles and set a background color */
+
+/* styles.css */
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed; /* Set position to fixed */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Set a higher z-index to ensure it's above other content */
+}
+
+.nav > .nav-header {
+    display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #000000;
+    padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-header > .nav-title > img {
+    height: 30px; /* Adjust the height as needed */
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.nav > .nav-btn {
+    display: none;
+}
+
+.nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+}
+
+.nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav > .nav-links > a:hover {
+    background-color: rgba(26, 118, 167, 0.637);
+}
+
+.nav > #nav-check {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .nav > .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(21, 144, 196, 0);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #000000;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #ffffffd6;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: #000000;
@@ -8,6 +107,7 @@ body {
     padding: 0;
     /* Set the background image and its path */
     background-image: url('images/newtonbg.jpg');
+    padding-top: 50px;
 
     /* Make the background cover the entire viewport */
     background-size: cover;
